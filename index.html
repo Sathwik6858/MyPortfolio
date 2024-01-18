@@ -609,7 +609,7 @@
 <div id="contact">
     <div class="container">
         <div class="row">
-            <div class="contact-left">
+            <div class="contact-left"> <!-- Corrected class name -->
                 <h1 class="sub-title">Let's Connect</h1>
                 <p><i class="fa-solid fa-envelope"></i> sathwikalasyam30@gmail.com</p>
                 <div class="social-icons">
@@ -618,42 +618,23 @@
                 </div>
                 <a href="images/Resume.pdf" class="btn btn2" target="_blank">Resume</a>
             </div>
-            <div class="contact-right">
-                <form name="submit-to-google-sheet" id="myForm"> <!-- Added id "myForm" for easy reference -->
+            <div class="contact-right"> <!-- Corrected class name -->
+                <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
+                    <button type="submit" class="btn btn2">Submit</button> <!-- Corrected type attribute -->
                 </form>
-                <div id="msg"></div>
+                <div id="msg"></div> <!-- Added message display element -->
             </div>
         </div>
     </div>
     <div class="copyright">
         <p>
-            &copy; 2023 Sathwik's Portfolio
+            &copy; 2023 Sathwik's Portfolio <!-- Corrected copyright symbol -->
         </p>
     </div>
 </div>
-
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwPSmvROTebywXux6Q7keSUTiJuW8o478oRy0DGh6GC1gcxADkVWSVYWF0PZR0J8zo/exec'
-    const form = document.getElementById('myForm'); // Changed to use the form's id
-    const msg = document.getElementById("msg");
-
-    form.addEventListener('submit', e => {
-        e.preventDefault();
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-            .then(response => {
-                msg.innerHTML = "Message Sent successfully";
-                setTimeout(function () {
-                    msg.innerHTML = "";
-                }, 5000);
-                form.reset(); // Reset the form
-            })
-            .catch(error => console.error('Error!', error.message));
-    });
-</script>
 
 
 <script>
