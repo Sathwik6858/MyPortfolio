@@ -609,7 +609,7 @@
 <div id="contact">
     <div class="container">
         <div class="row">
-            <div class="contact-left">
+            <div class="conatct-left">
                 <h1 class="sub-title">Let's Connect</h1>
                     <p><i class="fa-solid fa-envelope"></i> sathwikalasyam30@gmail.com</p>
                     <div class="social-icons">
@@ -618,7 +618,7 @@
                     </div>
                     <a href="images/Resume.pdf" class="btn btn2" target="_blank">Resume</a>
                 </div>
-                <div class="contact-right">
+                <div class="conatct-right">
                     <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
@@ -630,7 +630,7 @@
     </div>
     <div class="copyright">
         <p>
-            &copy 2023 Sathwik's Portfolio
+            &copy 2023 Sathwik's Portfilio
         </p>
     </div>
 </div>
@@ -641,7 +641,7 @@
     const form = document.forms['submit-to-google-sheet']
     const msg = document.getElementById("msg")
   
-    form.addEventListener('Submit', e => {
+    form.addEventListener('submit', e => {
       e.preventDefault()
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response => {
