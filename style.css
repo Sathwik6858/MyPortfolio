@@ -752,11 +752,11 @@ position: relative;
   .panel-group.resume .resume-item:last-child {
     margin-bottom: 20px;
   }
-  .panel-group.resume .resume-item .resume-year {
-    display: block;
+.panel-group.resume .resume-item .resume-year {
+    display: inline-block;
     position: relative;
-    width: 120px;
-    height: 40px;
+    width: auto; /* Allow the width to adjust dynamically */
+    padding: 10px 20px; /* Increase padding to give the text more space */
     margin-bottom: -20px;
     margin-right: auto;
     margin-left: auto;
@@ -768,7 +768,8 @@ position: relative;
     font-weight: 400;
     border-radius: 5px;
     color: #fff;
-  }
+    white-space: nowrap; /* Prevent text from wrapping */
+}
   @media (min-width: 568px) {
     .panel-group.resume .resume-item .resume-year {
       position: absolute;
